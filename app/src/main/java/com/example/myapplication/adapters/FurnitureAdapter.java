@@ -1,6 +1,7 @@
 package com.example.myapplication.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.ProductDetailActivity;
 import com.example.myapplication.R; // Add this import for R
 import com.example.myapplication.models.Furniture;
 
@@ -37,6 +39,16 @@ public class FurnitureAdapter extends RecyclerView.Adapter<FurnitureAdapter.View
         Furniture furniture = furnitureList.get(position);
         holder.textViewName.setText(furniture.getName());
         holder.textViewPrice.setText("$" + furniture.getPrice());
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, ProductDetailActivity.class);
+            intent.putExtra("name", furniture.getName());
+            intent.putExtra("category", furniture.getCategory());
+            intent.putExtra("price", furniture.getPrice());
+            intent.putExtra("description", furniture.getDescription());
+            intent.putExtra("image", furniture.getImage());
+            intent.putExtra("modelUrl", furniture.getModelUrl());
+            context.startActivity(intent);
+        });
 
         Glide.with(context).load(furniture.getImage()).into(holder.imageView);
     }

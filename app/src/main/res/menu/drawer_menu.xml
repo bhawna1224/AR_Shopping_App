@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_profile"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_person" />
+    <item
+        android:id="@+id/nav_orders"
+        android:title="@string/orders"
+        android:icon="@drawable/ic_orders" />
+    <item
+        android:id="@+id/nav_wishlist"
+        android:title="@string/wishlist"
+        android:icon="@drawable/ic_wishlist" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="@string/logout"
+        android:icon="@drawable/ic_logout" />
+    <item
+        android:id="@+id/nav_cart"
+        android:title="@string/cart"
+        android:icon="@drawable/ic_cart" />
+</menu>

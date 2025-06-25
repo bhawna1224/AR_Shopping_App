@@ -30,7 +30,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/bhawna1224/ar_shopping_app.git
+   https://github.com/bhawna1224/AR_Shopping_App.git
 #### 2. Open the Project
 - Launch **Android Studio**
 - Select **Open an existing project**
